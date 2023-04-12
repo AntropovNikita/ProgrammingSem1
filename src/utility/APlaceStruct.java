@@ -51,10 +51,10 @@ public abstract class APlaceStruct
 
     /**
      * Уменьшение кол-ва вещи в локации
+     *
      * @param thing Объект вещи
-     * @return true, если получилось уменьшить, иначе false
      */
-    public boolean removeThing(ThingStruct thing)
+    public void removeThing(ThingStruct thing)
     {
         for(ThingStruct thing1 : this.things)
             if (thing.equals(thing1) && thing1.Amount() >= thing.Amount()) // Если вещи одинаковые, и текущее кол-во меньше желаемого для удаления
@@ -66,10 +66,9 @@ public abstract class APlaceStruct
                     System.out.printf("Закончилась %s в %s\n", thing1, this);
                     this.things.remove(thing1);
                 }
-                return true;
+                return;
             }
 
-        return false;
     }
 
     /**

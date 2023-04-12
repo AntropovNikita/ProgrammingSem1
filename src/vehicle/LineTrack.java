@@ -30,7 +30,7 @@ public final class LineTrack implements ITrack
         if (start == null || end == null)
             throw new NullPointerException("Заданные космические тела не найдены");
         if (start.Coord().equals(end.Coord()))
-            throw new NoDistanceException("Нулевая дистанция между " + start.toString() + " и " + end.toString());
+            throw new NoDistanceException("Нулевая дистанция между " + start + " и " + end);
 
         this.start = start;
         this.end = end;

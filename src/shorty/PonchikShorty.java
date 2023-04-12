@@ -30,7 +30,7 @@ public final class PonchikShorty extends ACreature implements IEater
     {
         if (this.place != null && this.feel == EFeelsType.HUNGRY)
         {
-            int remain = amount;
+            int remain;
             for (ThingStruct thing : this.place.getThings())
                 if (thing.Type() == ThingStruct.EThingType.FOOD)
                 {
@@ -83,7 +83,4 @@ public final class PonchikShorty extends ACreature implements IEater
         PonchikShorty ponchikShorty = (PonchikShorty) o;
         return this.name.equals(ponchikShorty.name) && this.type == ponchikShorty.type;
     }
-
-    @Override
-    public int hashCode() { return Objects.hash(this.name, this.type); }
 }

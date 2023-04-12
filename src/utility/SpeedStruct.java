@@ -50,15 +50,13 @@ public final class SpeedStruct
      */
     private void convert()
     {
-        switch (this.type)
-        {
-            case KM_PER_S: // Из км/с в км/ч
-                this.speed *= 60*60;
+        switch (this.type) {
+            case KM_PER_S -> { // Из км/с в км/ч
+                this.speed *= 60 * 60;
                 this.type = ESpeedType.KM_PER_H;
-                break;
-            case KM_PER_H:
-            default:
-                break;
+            }
+            default -> {
+            }
         }
     }
 

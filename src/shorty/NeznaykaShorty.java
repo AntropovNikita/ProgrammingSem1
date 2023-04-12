@@ -97,7 +97,4 @@ public final class NeznaykaShorty extends ACreature implements IAstroWatcher
         NeznaykaShorty neznaykaShorty = (NeznaykaShorty) o;
         return this.name.equals(neznaykaShorty.name) && this.type == neznaykaShorty.type;
     }
-
-    @Override
-    public int hashCode() { return Objects.hash(this.name, this.type); }
 }
